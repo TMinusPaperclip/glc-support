@@ -24,6 +24,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
            2007, Tomas Carnecky (tom@dbservice.com)
 */
 
+#include <sys/types.h>
+#include <stdint.h>
+#include <string.h>
+#include "quicklz.h"
+
 #define u8ptr(ptr) ((u_int8_t *) ptr)
 #define u8(ptr) *u8ptr(ptr)
 #define u16ptr(ptr) ((u_int16_t *) (ptr))
