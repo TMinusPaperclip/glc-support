@@ -48,6 +48,7 @@ static void quicklz_expand(uintptr_t to, uintptr_t from, size_t len)
 		memcpy((void *) to, (void *) from, len);
 }
 
+__attribute__ ((visibility ("default")))
 int quicklz_compress(const unsigned char *_from, unsigned char *_to,
 		     size_t uncompressed_size, size_t *compressed_size,
 		     uintptr_t *hashtable)
@@ -201,6 +202,7 @@ int quicklz_compress(const unsigned char *_from, unsigned char *_to,
 	return 0;
 }
 
+__attribute__ ((visibility ("default")))
 int quicklz_decompress(const unsigned char *_from, unsigned char *_to,
 		       size_t uncompressed_size)
 {
